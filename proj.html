@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda sobre ecologia e a importância da preservação ambiental. Site acessível para todos.">
+    <title>Ecologia para Todos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Ecologia para Todos</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#importancia">Importância</a></li>
+                <li><a href="#dicas">Dicas Ecológicas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <button id="aumentar-fontes" onclick="aumentarFonte()">Aumentar Fontes</button>
+    </header>
+
+    <main>
+        <!-- Seção sobre a ecologia -->
+        <section id="sobre">
+            <h2>Sobre a Ecologia</h2>
+            <p>A ecologia é o estudo das interações entre os seres vivos e seu ambiente. O equilíbrio ecológico é essencial para a sobrevivência de todas as formas de vida, incluindo os seres humanos.</p>
+            <img src="img/2017-09-14-05-57-39.jpg" alt="Árvores verde em um ambiente natural" class="img-principal">
+        </section>
+
+        <!-- Seção sobre a importância da preservação ambiental -->
+        <section id="importancia">
+            <h2>A Importância da Preservação Ambiental</h2>
+            <p>Proteger o meio ambiente é vital para garantir recursos naturais para as gerações futuras e manter a biodiversidade do planeta.</p>
+            <ul>
+                <li>Redução da poluição do ar e da água</li>
+                <li>Preservação de habitats naturais</li>
+                <li>Promoção de práticas sustentáveis</li>
+            </ul>
+        </section>
+
+        <!-- Seção de dicas ecológicas -->
+        <section id="dicas">
+            <h2>Dicas para Ajudar o Meio Ambiente</h2>
+            <ul>
+                <li>Plante árvores e cuide das áreas verdes</li>
+                <li>Recicle e reduza o uso de plásticos</li>
+                <li>Use transporte público ou caronas para reduzir emissões</li>
+                <li>Economize energia e água no seu dia a dia</li>
+            </ul>
+            <img src="img/reciclagem.jpg" alt="Pessoas reciclando materiais, como papel e plásticos" class="img-secundaria">
+        </section>
+
+        <!-- Seção de contato -->
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato para saber mais sobre como você pode contribuir para a preservação ambiental.</p>
+            <form action="#">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ecologia para Todos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
