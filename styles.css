@@ -1,0 +1,98 @@
+/* Corpo da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;  /* Cor de fundo clara (branco) */
+    color: #333;  /* Texto escuro */
+    line-height: 1.6;
+    padding: 20px;
+    font-size: 1.1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #00796b;  /* Cor de fundo escura e acessível (verde escuro) */
+    color: #ffffff;  /* Texto branco */
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff;  /* Links brancos */
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+}
+
+nav a:hover, nav a:focus {
+    background-color: #004d40;  /* Cor mais escura para hover/focus */
+    color: #988b8b;
+}
+
+/* Botões */
+button {
+    background-color: #004d40;  /* Cor de fundo do botão */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover, button:focus {
+    background-color: #004d40;  /* Foco e hover com contraste mais escuro */
+    outline: 2px solid #ffeb3b;  /* Foco visível em amarelo */
+}
+
+/* Seções */
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Links de navegação no rodapé */
+footer {
+    background-color: #004d40;  /* Cor escura no rodapé */
+    color: #ffffff;  /* Texto branco no rodapé */
+    text-align: center;
+    padding: 15px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Imagens */
+.img-principal, .img-secundaria {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Foco visível para navegação por teclado */
+a:focus, button:focus {
+    outline: 3px solid #ffeb3b; /* Foco amarelo */
+    outline-offset: 3px;
+}
+
