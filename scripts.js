@@ -1,14 +1,21 @@
-// Função para aumentar o tamanho da fonte
-function aumentarFonte() {
-    // Selecionar todos os elementos que têm texto
-    const elementosTexto = document.querySelectorAll('body, h1, h2, h3, p, li, label, button');
-    
-    // Definir o aumento da fonte
-    elementosTexto.forEach(elemento => {
-        let fontSize = window.getComputedStyle(elemento).fontSize;
-        fontSize = parseFloat(fontSize); // Converter para número
+document.addEventListener("DOMContentLoaded", function () {
+    ScrollReveal().reveal('section', { delay: 200, distance: '50px', origin: 'bottom' });
 
-        // Aumentar o tamanho da fonte em 2px
-        elemento.style.fontSize = (fontSize + 2) + 'px';
+    let tamanhoFonte = 16;
+
+    document.getElementById("aumentar-fonte").addEventListener("click", function () {
+        tamanhoFonte += 2;
+        document.body.style.fontSize = tamanhoFonte + "px";
     });
-}
+
+    document.getElementById("diminuir-fonte").addEventListener("click", function () {
+        if (tamanhoFonte > 12) {
+            tamanhoFonte -= 2;
+            document.body.style.fontSize = tamanhoFonte + "px";
+        }
+    });
+
+    document.getElementById("alternar-contraste").addEventListener("click", function () {
+        document.body.classList.toggle("alto-contraste");
+    });
+});
