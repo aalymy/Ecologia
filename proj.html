@@ -5,79 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aprenda sobre ecologia e a importância da preservação ambiental. Site acessível para todos.">
     <title>Ecologia para Todos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap e Ícones -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1>Ecologia para Todos</h1>
+    <!-- Botão de acessibilidade -->
+    <div class="acessibilidade">
+        <button id="toggle-acessibilidade" class="btn btn-success">
+            <i class="bi bi-universal-access"></i> Acessibilidade
+        </button>
+        <div class="acessibilidade-opcoes">
+            <button id="aumentar-fonte" class="btn btn-primary" aria-label="Aumentar fonte">A+</button>
+            <button id="diminuir-fonte" class="btn btn-secondary" aria-label="Diminuir fonte">A-</button>
+            <button id="alternar-contraste" class="btn btn-dark" aria-label="Alternar contraste">🌙</button>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#importancia">Importância</a></li>
-                <li><a href="#dicas">Dicas Ecológicas</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-        <button id="aumentar-fontes" onclick="aumentarFonte()">Aumentar Fontes</button>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header class="text-center p-5 text-white">
+        <div class="container">
+            <h1 class="fw-bold">Ecologia para Todos</h1>
+            <p class="lead">A natureza precisa de você. Faça sua parte!</p>
+        </div>
     </header>
 
-    <main>
-        <!-- Seção sobre a ecologia -->
-        <section id="sobre">
-            <h2>Sobre a Ecologia</h2>
-            <p>A ecologia é o estudo das interações entre os seres vivos e seu ambiente. O equilíbrio ecológico é essencial para a sobrevivência de todas as formas de vida, incluindo os seres humanos.</p>
-            <img src="img/2017-09-14-05-57-39.jpg" alt="Árvores verde em um ambiente natural" class="img-principal">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#importancia">Importância</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dicas">Dicas Ecológicas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <section id="sobre" class="my-5 text-center">
+            <h2 class="fw-bold">Sobre a Ecologia</h2>
+            <p>A ecologia estuda as interações entre seres vivos e o ambiente. O equilíbrio ecológico é essencial para a vida no planeta.</p>
+            <img src="img/thumb-1920-399647.jpg" alt="Floresta com montanhas no fundo" class="img-fluid rounded shadow-lg">
         </section>
 
-        <!-- Seção sobre a importância da preservação ambiental -->
-        <section id="importancia">
-            <h2>A Importância da Preservação Ambiental</h2>
-            <p>Proteger o meio ambiente é vital para garantir recursos naturais para as gerações futuras e manter a biodiversidade do planeta.</p>
-            <ul>
-                <li>Redução da poluição do ar e da água</li>
-                <li>Preservação de habitats naturais</li>
-                <li>Promoção de práticas sustentáveis</li>
+        <section id="importancia" class="my-5 text-center">
+            <h2 class="fw-bold">A Importância da Preservação</h2>
+            <ul class="list-group list-group-flush text-start mx-auto w-50">
+                <li class="list-group-item">Redução da poluição</li>
+                <li class="list-group-item">Preservação de habitats</li>
+                <li class="list-group-item">Promoção da sustentabilidade</li>
             </ul>
         </section>
 
-        <!-- Seção de dicas ecológicas -->
-        <section id="dicas">
-            <h2>Dicas para Ajudar o Meio Ambiente</h2>
-            <ul>
-                <li>Plante árvores e cuide das áreas verdes</li>
-                <li>Recicle e reduza o uso de plásticos</li>
-                <li>Use transporte público ou caronas para reduzir emissões</li>
-                <li>Economize energia e água no seu dia a dia</li>
-            </ul>
-            <img src="img/reciclagem.jpg" alt="Pessoas reciclando materiais, como papel e plásticos" class="img-secundaria">
+        <section id="dicas" class="my-5 text-center">
+            <h2 class="fw-bold">Dicas para Ajudar o Meio Ambiente</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-group text-start">
+                        <li class="list-group-item">Recicle materiais</li>
+                        <li class="list-group-item">Use menos plástico</li>
+                        <li class="list-group-item">Economize água e energia</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="img/reciclagem.jpg" alt="Reciclagem" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
         </section>
 
-        <!-- Seção de contato -->
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Entre em contato para saber mais sobre como você pode contribuir para a preservação ambiental.</p>
-            <form action="#">
+        <section id="contato" class="my-5 text-center">
+            <h2 class="fw-bold">Contato</h2>
+            <p>Entre em contato e saiba como ajudar a natureza!</p>
+            <form class="w-50 mx-auto">
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-                
+                <input type="text" id="nome" class="form-control" required>
+
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-                
+                <input type="email" id="email" class="form-control" required>
+
                 <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-                
-                <button type="submit">Enviar</button>
+                <textarea id="mensagem" class="form-control" rows="4" required></textarea>
+
+                <button type="submit" class="btn btn-success mt-3">Enviar</button>
             </form>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Ecologia para Todos. Todos os direitos reservados.</p>
+    <footer class="text-center p-3 bg-dark text-white">
+        <p>&copy; Ecologia para Todos</p>
     </footer>
 
+    <!-- Bootstrap, ScrollReveal e Script de Acessibilidade -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
+
